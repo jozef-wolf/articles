@@ -4,3 +4,32 @@ body {
   background-color: #78acf1;
   box-sizing: border-box;
 }
+body {
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: #78acf1;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  border: none;
+  box-shadow: 0px 7px 18px -3px rgba(0, 0, 0, 0.75);
+  position: fixed;
+  background-color: #5d9df1;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header h1 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
