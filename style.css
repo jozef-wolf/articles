@@ -1,13 +1,7 @@
 body {
   margin: 0;
   font-family: "Roboto Mono", monospace;
-  background-color: #78acf1;
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: "Roboto Mono", monospace;
-  background-color: #78acf1;
+  background-color: #494949;
   box-sizing: border-box;
 }
 
@@ -23,11 +17,12 @@ body {
   border: none;
   box-shadow: 0px 7px 18px -3px rgba(0, 0, 0, 0.75);
   position: fixed;
-  background-color: #5d9df1;
+  background-color: #000000;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(190, 190, 190);
 }
 .header h1 {
   letter-spacing: 5px;
