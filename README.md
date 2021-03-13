@@ -1,4 +1,4 @@
 # Articles
 ## Fetching data from json placeholder
 ### -Async & await
-[LINK](https://jozef-wolf.github.io/Articles/).
+[Go to Articles](https://jozef-wolf.github.io/Articles/)
