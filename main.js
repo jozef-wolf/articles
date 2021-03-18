@@ -17,7 +17,7 @@ https://jsonplaceholder.typicode.com/posts?_sort=title
     <div class='post'>
     <h2 class='title'>${post.title}</h2>
     <p class='article'>${post.body.slice(0, 200)}</p>
-    <a href="/details.html?id=${post.id}">read more..</a>
+    <a href="https://jozef-wolf.github.io/details?id=${post.id}">read more..</a>
     </div>`;
   });
   container.innerHTML = template;
