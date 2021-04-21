@@ -34,12 +34,17 @@ body {
       text-transform: uppercase;
       &--search {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        background-color: white;
+        border-radius: 35px;
+        height: 35px;
+        width: 250px;
         & input {
           outline: none;
           border: none;
-          border-radius: 20px;
+          background-color: transparent;
+          margin-left: 10px;
         }
       }
     }
