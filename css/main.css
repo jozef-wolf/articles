@@ -10,6 +10,9 @@ body {
   width: 100%;
 }
 .wrapper .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 80px;
   width: 100%;
   border: none;
@@ -17,9 +20,6 @@ body {
   position: fixed;
   background-color: #000000;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #bebebe;
 }
 .wrapper .navbar__logo {
@@ -77,14 +77,14 @@ body {
   text-transform: uppercase;
 }
 .container__aside {
+  display: flex;
+  flex-direction: column;
   border: none;
   height: 100%;
   width: 30%;
   box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   background-color: white;
-  display: flex;
-  flex-direction: column;
   padding: 10px;
   margin-right: 5px;
 }

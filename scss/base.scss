@@ -6,10 +6,10 @@ body {
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   width: 100%;
   .navbar {
+    @include flex-center;
     height: 80px;
     width: 100%;
     border: none;
@@ -17,18 +17,13 @@ body {
     position: fixed;
     background-color: #000000;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: rgb(190, 190, 190);
     &__logo {
       padding: 20px;
       font-size: 30px;
     }
     &__header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
       width: 100%;
       letter-spacing: 20px;
       text-transform: uppercase;
@@ -65,8 +60,7 @@ body {
     margin: 0 5px 0 5px;
 
     .post {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       align-items: center;
       padding: 20px;
       box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
@@ -78,14 +72,14 @@ body {
     }
   }
   &__aside {
+    @include flex-column;
     border: none;
     height: 100%;
     width: 30%;
     box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     background-color: white;
-    display: flex;
-    flex-direction: column;
+
     padding: 10px;
     margin-right: 5px;
     & image {
