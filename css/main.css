@@ -1,3 +1,7 @@
+.searchbar {
+  background-color: red;
+}
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -9,53 +13,13 @@ body {
   flex-direction: column;
   width: 100%;
 }
-.wrapper .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-  border: none;
-  box-shadow: 0px 7px 18px -3px rgba(0, 0, 0, 0.75);
-  position: fixed;
-  background-color: #000000;
-  top: 0;
-  color: #bebebe;
-}
-.wrapper .navbar__logo {
-  padding: 20px;
-  font-size: 30px;
-}
-.wrapper .navbar__header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  letter-spacing: 20px;
-  text-transform: uppercase;
-}
-.wrapper .navbar__header--search {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  border-radius: 35px;
-  height: 35px;
-  width: 250px;
-}
-.wrapper .navbar__header--search input {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  margin-left: 10px;
-}
 
 .container {
+  display: flex;
+  justify-content: center;
   margin-top: 110px;
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: center;
 }
 .container__posts {
   border: none;

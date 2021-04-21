@@ -8,50 +8,14 @@ body {
 .wrapper {
   @include flex-column;
   width: 100%;
-  .navbar {
-    @include flex-center;
-    height: 80px;
-    width: 100%;
-    border: none;
-    box-shadow: 0px 7px 18px -3px rgba(0, 0, 0, 0.75);
-    position: fixed;
-    background-color: #000000;
-    top: 0;
-    color: rgb(190, 190, 190);
-    &__logo {
-      padding: 20px;
-      font-size: 30px;
-    }
-    &__header {
-      @include flex-center;
-      width: 100%;
-      letter-spacing: 20px;
-      text-transform: uppercase;
-      &--search {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: white;
-        border-radius: 35px;
-        height: 35px;
-        width: 250px;
-        & input {
-          outline: none;
-          border: none;
-          background-color: transparent;
-          margin-left: 10px;
-        }
-      }
-    }
-  }
 }
 
 .container {
+  @include flex-justify;
   margin-top: 110px;
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: center;
+
   &__posts {
     border: none;
     width: 55%;
