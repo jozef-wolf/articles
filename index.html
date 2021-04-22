@@ -12,35 +12,37 @@
     <title>Articles</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <div class="header__logo"><i class="fas fa-kiwi-bird"></i></div>
-        <h1 class="header__header--title">posts</h1>
-        <ul class="navbar">
-          <li>
-            <div class="navbar__search">
-              <input type="text" placeholder="search for article" />
-              <button><i class="fas fa-search"></i></button>
-            </div>
-          </li>
-        </ul>
-      </header>
-      <div class="container">
-        <article class="container__posts"></article>
-        <aside class="container__aside">
-          <img src="https://picsum.photos/300" alt="photo" />
-          <button>go to</button>
-          <img src="https://picsum.photos/300" alt="photo" />
-          <button>go to</button>
-          <img src="https://picsum.photos/300" alt="photo" />
-          <button>go to</button>
-          <img src="https://picsum.photos/300" alt="photo" />
-          <button>go to</button>
-          <img src="https://picsum.photos/300" alt="photo" />
-          <button>go to</button>
-          <img src="https://picsum.photos/300" alt="photo" />
-        </aside>
-      </div>
+    <header class="header">
+      <div class="header__logo"><i class="fas fa-kiwi-bird"></i></div>
+      <h1 class="header__title">posts</h1>
+      <ul class="header__navbar">
+        <li class="header__navbar--search">
+          <input
+            type="text"
+            placeholder="search for article"
+            aria-label="search"
+          />
+          <button>
+            <i class="fas fa-search" aria-label="submit search"></i>
+          </button>
+        </li>
+      </ul>
+    </header>
+    <div class="container">
+      <article class="container__posts"></article>
+      <aside class="container__aside">
+        <img src="https://picsum.photos/300" alt="photo" />
+        <button>go to</button>
+        <img src="https://picsum.photos/300" alt="photo" />
+        <button>go to</button>
+        <img src="https://picsum.photos/300" alt="photo" />
+        <button>go to</button>
+        <img src="https://picsum.photos/300" alt="photo" />
+        <button>go to</button>
+        <img src="https://picsum.photos/300" alt="photo" />
+        <button>go to</button>
+        <img src="https://picsum.photos/300" alt="photo" />
+      </aside>
     </div>
     <script src="main.js"></script>
   </body>

@@ -5,9 +5,26 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.wrapper {
-  @include flex-column;
+.header {
+  @include flex-align;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  position: fixed;
   width: 100%;
+  z-index: 20;
+  top: 0;
+  &__logo {
+    font-size: 35px;
+  }
+  &__title {
+    font-size: 25px;
+  }
+  &__navbar {
+    list-style: none;
+    &--search {
+    }
+  }
 }
 
 .container {
