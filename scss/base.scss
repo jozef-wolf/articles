@@ -41,17 +41,15 @@ body {
       margin-right: 15px;
     }
   }
-  &__nav {
-  }
-  .nav__right--search {
-    border: none;
+  .secondary__navigation--search {
+    border: 1px solid transparent;
     background-color: black;
     display: flex;
     border-radius: 100vh;
     //always use border-radius: 100vh;
     //it will give perfectly round corners
     padding: 3px;
-    width: 19px;
+    width: 30px;
     position: relative;
     transition: width 300ms ease-in-out;
     overflow: hidden;
@@ -87,6 +85,17 @@ body {
 
       input {
         opacity: 1;
+      }
+    }
+  }
+  .secondary__navigation--user {
+    cursor: pointer;
+    i:last-child {
+      padding-left: 4px;
+      font-size: 10px;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: rotate(180deg);
       }
     }
   }
