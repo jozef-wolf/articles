@@ -122,21 +122,12 @@ body {
   padding: 10px;
   margin-right: 5px;
 }
-.container__aside image {
-  padding: 2px;
-  width: 100%;
-  height: auto;
-  object-fit: scale-down;
+.container__aside h2 {
+  color: red;
 }
-.container__aside button {
-  color: black;
-  background-color: transparent;
-  border: none;
-  text-transform: uppercase;
-  color: blue;
-  font-size: 12px;
-  font-weight: bold;
-  text-decoration: underline;
+.container__aside img {
+  width: 300px;
+  height: 300px;
 }
 
 /*# sourceMappingURL=base.css.map */
