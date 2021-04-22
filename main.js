@@ -1,5 +1,5 @@
 const postContainer = document.querySelector(".container__posts");
-const asideContainer = document.querySelector(".container__aside");
+const asideContainer = document.querySelector(".container__weather");
 //create render function
 
 const renderPosts = async () => {
@@ -23,8 +23,9 @@ https://jsonplaceholder.typicode.com/posts?_sort=title
   postContainer.innerHTML = template;
 };
 
+var input = "Sopot";
 const renderWeather = async () => {
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=Sopot&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
   const res = await fetch(url);
   const wheater = await res.json();
   console.log(wheater);
@@ -38,15 +39,14 @@ const renderWeather = async () => {
   let celsiusFeel = convertToC(wheater.main.feels_like).toFixed(2);
   //cirlce through posts and fire a callback function for each post. Each time we fire callback fn we get access.
   template += `
-    <div class='weather'>
-      <h2 class='weather__city'>${wheater.name}</h2>
-      <ul class='weather__city--info'>
-        <li>${celsiusTemp} C</li>
-         <li>${celsiusFeel} C</li>
-        <li>${wheater.main.humidity}</li>
-        <li>${wheater.main.pressure}</li>
+      <h2 class='container__weather--city'>${wheater.name}</h2>
+      <ul class='container__weather--info'>
+        <li><i class="fas fa-thermometer-three-quarters"></i>${celsiusTemp} °C</li>
+        <li>Feels like: ${celsiusFeel} °C</li>
+        <li><i class="fas fa-tint"></i>Humidity: ${wheater.main.humidity}%</li>
+        <li>Pressure: ${wheater.main.pressure} hPa</li>
       </ul>
-    </div>`;
+    `;
 
   asideContainer.innerHTML = template;
 };

@@ -110,29 +110,27 @@ body {
 .container__posts .post .title {
   text-transform: uppercase;
 }
-.container__aside {
+.container__weather {
   display: flex;
   flex-direction: column;
-  border: none;
-  height: 100%;
+  align-items: center;
   width: 30%;
-  box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  background-color: turquoise;
+  box-shadow: 0px 2px 10px -1px turquoise(0, 0, 0, 0.5);
   border-radius: 10px;
-  background-color: white;
-  padding: 10px;
-  margin-right: 5px;
 }
-.container__aside .weather {
-  background-color: #91e0e5;
+.container__weather--city {
+  font-size: 40px;
+  font-weight: 300;
 }
-.container__aside .weather li {
+.container__weather--info li {
+  font-size: 22px;
   list-style: none;
 }
-.container__aside .weather__city {
-  font-size: 26px;
-}
-.container__aside .weather__city--info {
-  font-size: 24px;
+.container__weather--info li:first-child {
+  font-size: 45px;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=main.css.map */

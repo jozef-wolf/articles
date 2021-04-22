@@ -130,27 +130,27 @@ body {
       }
     }
   }
-  &__aside {
+  &__weather {
     @include flex-column;
-    border: none;
-    height: 100%;
+    align-items: center;
     width: 30%;
-    box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    background-color: turquoise;
+    box-shadow: 0px 2px 10px -1px turquoise(0, 0, 0, 0.5);
     border-radius: 10px;
-    background-color: white;
-    padding: 10px;
-    margin-right: 5px;
-    .weather {
-      background-color: rgb(145, 224, 229);
-      li {
-        list-style: none;
-      }
-      &__city {
-        font-size: 26px;
-      }
+    &--city {
+      font-size: 40px;
+      font-weight: 300;
     }
-    .weather__city--info {
-      font-size: 24px;
+    &--info {
+      li {
+        font-size: 22px;
+        list-style: none;
+        &:first-child {
+          font-size: 45px;
+          font-weight: 300;
+        }
+      }
     }
   }
 }
