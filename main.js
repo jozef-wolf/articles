@@ -23,7 +23,7 @@ https://jsonplaceholder.typicode.com/posts?_sort=title
   postContainer.innerHTML = template;
 };
 
-var input = "Sopot";
+let input = "Sopot";
 const renderWeather = async () => {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
   const res = await fetch(url);
