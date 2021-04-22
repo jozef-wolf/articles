@@ -141,7 +141,10 @@ body {
     padding: 10px;
     margin-right: 5px;
     .weather {
-      border: 1px solid black;
+      background-color: rgb(145, 224, 229);
+      li {
+        list-style: none;
+      }
       &__city {
         font-size: 26px;
       }

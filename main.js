@@ -7,7 +7,6 @@ const renderPosts = async () => {
 https://jsonplaceholder.typicode.com/posts?_sort=title
 `;
   const res = await fetch(url); //wait till we get the data (response object) back (response is stored in const).
-  console.log(res);
   const posts = await res.json(); //json takes the response object and parses the data into js object.
   console.log(posts);
 
@@ -27,23 +26,23 @@ https://jsonplaceholder.typicode.com/posts?_sort=title
 const renderWeather = async () => {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=Sopot&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
   const res = await fetch(url);
-  console.log(res);
   const wheater = await res.json();
   console.log(wheater);
 
   let template = "";
-  function convertToC(fahrenheit) {
-    let celsius = (5 / 9) * (fahrenheit - 32);
+  function convertToC(kelvin) {
+    let celsius = kelvin - 273.15;
     return celsius;
   }
-  let celsiusTemp = convertToC(wheater.main.temp);
+  let celsiusTemp = convertToC(wheater.main.temp).toFixed(1);
+  let celsiusFeel = convertToC(wheater.main.feels_like).toFixed(2);
   //cirlce through posts and fire a callback function for each post. Each time we fire callback fn we get access.
-  console.log(wheater);
   template += `
     <div class='weather'>
       <h2 class='weather__city'>${wheater.name}</h2>
       <ul class='weather__city--info'>
         <li>${celsiusTemp} C</li>
+         <li>${celsiusFeel} C</li>
         <li>${wheater.main.humidity}</li>
         <li>${wheater.main.pressure}</li>
       </ul>
