@@ -122,12 +122,14 @@ body {
   padding: 10px;
   margin-right: 5px;
 }
-.container__aside h2 {
-  color: red;
+.container__aside .weather {
+  border: 1px solid black;
 }
-.container__aside img {
-  width: 300px;
-  height: 300px;
+.container__aside .weather__city {
+  font-size: 26px;
+}
+.container__aside .weather__city--info {
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=base.css.map */

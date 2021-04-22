@@ -32,17 +32,20 @@ const renderWeather = async () => {
   console.log(wheater);
 
   let template = "";
-
+  function convertToC(fahrenheit) {
+    let celsius = (5 / 9) * (fahrenheit - 32);
+    return celsius;
+  }
+  let celsiusTemp = convertToC(wheater.main.temp);
   //cirlce through posts and fire a callback function for each post. Each time we fire callback fn we get access.
   console.log(wheater);
   template += `
-    <div>
-      <h2>City: ${wheater.name}</h2>
-      <ul>
-        <li>${wheater.main.temp}</li>
+    <div class='weather'>
+      <h2 class='weather__city'>${wheater.name}</h2>
+      <ul class='weather__city--info'>
+        <li>${celsiusTemp} C</li>
         <li>${wheater.main.humidity}</li>
         <li>${wheater.main.pressure}</li>
-        <li>${wheater.rain}</li>
       </ul>
     </div>`;
 
