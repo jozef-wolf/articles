@@ -1,4 +1,23 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+@mixin justify-center {
+  display: flex;
+  justify-content: center;
+}
+
 body {
+  @include flex-center;
   min-height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -6,7 +25,7 @@ body {
 }
 
 .header {
-  @include flex-align;
+  @include align-center;
   justify-content: space-between;
   background-color: black;
   color: white;
@@ -14,21 +33,66 @@ body {
   width: 100%;
   z-index: 20;
   top: 0;
-  &__logo {
-    font-size: 35px;
-  }
-  &__title {
-    font-size: 25px;
-  }
-  &__navbar {
+  ul {
+    display: flex;
+    flex-direction: row;
     list-style: none;
-    &--search {
+    li {
+      margin-right: 15px;
+    }
+  }
+  &__nav {
+  }
+  .nav__right--search {
+    border: none;
+    background-color: black;
+    display: flex;
+    border-radius: 100vh;
+    //always use border-radius: 100vh;
+    //it will give perfectly round corners
+    padding: 3px;
+    width: 19px;
+    position: relative;
+    transition: width 300ms ease-in-out;
+    overflow: hidden;
+    input {
+      background-color: transparent;
+      flex-grow: 1;
+      font-size: 14px;
+      color: white;
+      border: 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      &:focus {
+        outline: 0;
+      }
+    }
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      color: white;
+      font-size: 14px;
+      border: 0;
+      border-radius: 100vh;
+      height: 100%;
+      width: auto;
+      margin-left: auto;
+    }
+    &:focus-within {
+      border: 1px solid white;
+      width: 240px;
+      input {
+        opacity: 1;
+      }
     }
   }
 }
 
 .container {
-  @include flex-justify;
+  @include justify-center;
   margin-top: 110px;
   width: 100%;
   height: auto;

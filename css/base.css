@@ -1,17 +1,129 @@
-/* Error: Undefined mixin.
- *   ,
- * 9 |   @include flex-align;
- *   |   ^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\base.scss 9:3  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 9 \2502    @include flex-align;\d\a   \2502    ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\base.scss 9:3  root stylesheet";
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  top: 0;
+}
+.header ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.header ul li {
+  margin-right: 15px;
+}
+.header .nav__right--search {
+  border: none;
+  background-color: black;
+  display: flex;
+  border-radius: 100vh;
+  padding: 3px;
+  width: 19px;
+  position: relative;
+  transition: width 300ms ease-in-out;
+  overflow: hidden;
+}
+.header .nav__right--search input {
+  background-color: transparent;
+  flex-grow: 1;
+  font-size: 14px;
+  color: white;
+  border: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+.header .nav__right--search input:focus {
+  outline: 0;
+}
+.header .nav__right--search button {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  border: 0;
+  border-radius: 100vh;
+  height: 100%;
+  width: auto;
+  margin-left: auto;
+}
+.header .nav__right--search:focus-within {
+  border: 1px solid white;
+  width: 240px;
+}
+.header .nav__right--search:focus-within input {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 110px;
+  width: 100%;
+  height: auto;
+}
+.container__posts {
+  border: none;
+  width: 55%;
+  height: auto;
+  background-color: transparent;
+  margin: 0 5px 0 5px;
+}
+.container__posts .post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.container__posts .post .title {
+  text-transform: uppercase;
+}
+.container__aside {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  height: 100%;
+  width: 30%;
+  box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  margin-right: 5px;
+}
+.container__aside image {
+  padding: 2px;
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+}
+.container__aside button {
+  color: black;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  color: blue;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=base.css.map */
