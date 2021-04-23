@@ -27,23 +27,24 @@ const asideContainer = document.querySelector(".container__weather");
 // window.addEventListener("DOMContentLoaded", () => renderPosts());
 
 let input = "Sopot";
-var array = [];
-navigator.geolocation.getCurrentPosition(function (position) {
-  var lat = position.coords.latitude.toFixed(0);
-  var lon = position.coords.longitude.toFixed(0);
-  array.push(lat, lon);
-  locationCode();
+
+var lat, lon;
+var promise1 = new Promise(function (resolve, reject) {
+  navigator.geolocation.getCurrentPosition(function (pos) {
+    lat = pos.coords.latitude;
+    lon = pos.coords.longitude;
+    resolve({ lat, lon });
+  });
 });
 
-function locationCode() {
-  alert(array);
-}
-console.log(array);
+promise1.then(function (value) {
+  console.log(value.lat, value.lon);
+});
 
 const renderWeather = async () => {
-  // let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
 
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${array[0]}&lon=${array[1]}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
+  // let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
   const res = await fetch(url);
   const weater = await res.json();
   console.log(weater);
