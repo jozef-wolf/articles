@@ -46,6 +46,7 @@ const renderWeather = async () => {
       <h2 class='container__weather--city'>${weater.name} ${weater.sys.country}</h2>
       <div class='container__weather--icon'><img src='${icon}'></img></div>
       <ul class='container__weather--info'>
+        <li>${weater.weather[0].description}</li>
         <li><i class="fas fa-thermometer-three-quarters"></i>${celsiusTemp} °C</li>
         <li>Feels like: ${celsiusFeel} °C</li>
         <li><i class="fas fa-tint"></i>Humidity: ${weater.main.humidity}%</li>
