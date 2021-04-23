@@ -27,26 +27,55 @@ const asideContainer = document.querySelector(".container__weather");
 // window.addEventListener("DOMContentLoaded", () => renderPosts());
 
 let input = "Sopot";
+
 const renderWeather = async () => {
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      alert("no location") = "Geolocation is not supported by this browser.";
+    }
+  }
+  var lat;
+  var long;
+  function showPosition(position) {
+    lat = position.coords.latitude.toFixed(0);
+    long = position.coords.longitude.toFixed(0);
+    console.log(lat);
+    console.log(long);
+  }
+
+  getLocation();
+
+  console.log(lat);
+  console.log(long);
+
+  // let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
+
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
   const res = await fetch(url);
   const weater = await res.json();
   console.log(weater);
+
   let pic = weater.weather[0].icon;
   let icon = `http://openweathermap.org/img/wn/${pic}.png`;
+
   let template = "";
   function convertToC(kelvin) {
     let celsius = kelvin - 273.15;
     return celsius;
   }
+
   let celsiusTemp = convertToC(weater.main.temp).toFixed(1);
   let celsiusFeel = convertToC(weater.main.feels_like).toFixed(2);
+
   //cirlce through posts and fire a callback function for each post. Each time we fire callback fn we get access.
+
   template += `
       <h2 class='container__weather--city'>${weater.name} ${weater.sys.country}</h2>
       <div class='container__weather--icon'><img src='${icon}'></img></div>
       <ul class='container__weather--info'>
-        <li>${weater.weather[0].description}</li>
+      <li>${weater.weather[0].description}</li>
         <li><i class="fas fa-thermometer-three-quarters"></i>${celsiusTemp} °C</li>
         <li>Feels like: ${celsiusFeel} °C</li>
         <li><i class="fas fa-tint"></i>Humidity: ${weater.main.humidity}%</li>
