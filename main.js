@@ -7,6 +7,7 @@ const renderPosts = async () => {
 https://jsonplaceholder.typicode.com/posts?_sort=title
 `;
   const res = await fetch(url); //wait till we get the data (response object) back (response is stored in const).
+
   const posts = await res.json(); //json takes the response object and parses the data into js object.
   console.log(posts);
 
@@ -22,6 +23,8 @@ https://jsonplaceholder.typicode.com/posts?_sort=title
   });
   postContainer.innerHTML = template;
 };
+
+window.addEventListener("DOMContentLoaded", () => renderPosts());
 
 let input = "Sopot";
 const renderWeather = async () => {
@@ -51,5 +54,5 @@ const renderWeather = async () => {
   asideContainer.innerHTML = template;
 };
 //wait till DOM content is loaded, then fire a function.
-window.addEventListener("DOMContentLoaded", () => renderPosts());
+
 window.addEventListener("DOMContentLoaded", () => renderWeather());
