@@ -107,7 +107,6 @@ body {
   align-items: center;
   padding: 20px;
   box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
   margin-bottom: 20px;
 }
 .container__posts .post .title {
@@ -118,27 +117,28 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0;
-  width: 25%;
-  height: 100%;
+  padding: 0;
+  width: 20%;
+  height: 280px;
   box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  background-color: #3a4a79;
+  background-color: #79818f;
   color: white;
 }
 .container__weather--city {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 300;
   margin: 0;
   letter-spacing: 4px;
+  width: 100%;
+  background-color: #9196a0;
+  text-align: center;
 }
 .container__weather--icon {
-  margin: 10px;
-  height: 70px;
+  display: flex;
+  justify-content: center;
+  height: 80px;
   width: 30%;
-  text-align: center;
-  border-radius: 10px;
-  background-color: #e4e4e4;
-  box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
 }
 .container__weather--icon img {
   height: 100%;
@@ -146,19 +146,20 @@ body {
 }
 .container__weather--info {
   padding: 0;
+  width: 100%;
+  background-color: #9196a0;
 }
 .container__weather--info li {
   text-align: center;
-  font-size: 20px;
+  font-size: 14px;
   list-style: none;
-  margin: 4px;
-  padding: 5px;
+  padding: 2px;
 }
 .container__weather--info li:first-child {
   text-transform: capitalize;
 }
 .container__weather--info li:nth-child(2) {
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 300;
 }
 .container__weather--info li i {

@@ -55,7 +55,7 @@ function showMap(position) {
     }
 
     let celsiusTemp = convertToC(weater.main.temp).toFixed(1);
-    let celsiusFeel = convertToC(weater.main.feels_like).toFixed(2);
+    let celsiusFeel = convertToC(weater.main.feels_like).toFixed(1);
 
     //cirlce through posts and fire a callback function for each post. Each time we fire callback fn we get access.
 

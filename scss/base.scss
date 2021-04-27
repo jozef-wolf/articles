@@ -127,7 +127,7 @@ body {
       align-items: center;
       padding: 20px;
       box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
+
       margin-bottom: 20px;
       .title {
         text-transform: uppercase;
@@ -138,26 +138,27 @@ body {
     @include flex-column;
     align-items: center;
     margin: 0;
-    width: 25%;
-    height: 100%;
+    padding: 0;
+    width: 20%;
+    height: 280px;
     box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    background-color: rgb(58, 74, 121);
+    background-color: rgb(121, 129, 143);
     color: white;
     &--city {
-      font-size: 40px;
-      font-weight: 400;
+      font-size: 30px;
+      font-weight: 300;
       margin: 0;
       letter-spacing: 4px;
+      width: 100%;
+      background-color: rgb(145, 150, 160);
+      text-align: center;
     }
     &--icon {
-      margin: 10px;
-      height: 70px;
+      display: flex;
+      justify-content: center;
+      height: 80px;
       width: 30%;
-      text-align: center;
-      border-radius: 10px;
-      background-color: rgb(228, 228, 228);
-      box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
+      background-color: transparent;
       img {
         height: 100%;
         width: auto;
@@ -165,17 +166,19 @@ body {
     }
     &--info {
       padding: 0;
+      width: 100%;
+      background-color: rgb(145, 150, 160);
       li {
         text-align: center;
-        font-size: 20px;
+        font-size: 14px;
         list-style: none;
-        margin: 4px;
-        padding: 5px;
+
+        padding: 2px;
         &:first-child {
           text-transform: capitalize;
         }
         &:nth-child(2) {
-          font-size: 45px;
+          font-size: 30px;
           font-weight: 300;
         }
         & i {
