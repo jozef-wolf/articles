@@ -133,8 +133,8 @@ body {
 }
 .container__weather--icon {
   margin: 10px;
-  height: 100px;
-  width: 90%;
+  height: 70px;
+  width: 30%;
   text-align: center;
   border-radius: 10px;
   background-color: #e4e4e4;
