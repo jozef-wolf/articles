@@ -120,19 +120,25 @@ body {
   width: 20%;
   height: 280px;
   box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.5);
-  background-color: #4e545f;
-  color: white;
   font-weight: 300;
 }
 .container__weather--city {
   font-weight: 300;
+  margin: 0;
+}
+.container__weather--date {
+  font-size: 12px;
+  text-align: center;
+}
+.container__weather--icon img {
+  height: 100%;
 }
 .container__weather--info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  background-color: #7d818a;
+  border-radius: 10px;
   padding: 0;
   margin: 0;
   width: 100%;
