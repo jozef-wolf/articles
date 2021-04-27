@@ -23,7 +23,7 @@ https://jsonplaceholder.typicode.com/posts?_sort=title
   });
   postContainer.innerHTML = template;
 };
-
+//wait till DOM content is loaded, then fire a function.
 window.addEventListener("DOMContentLoaded", () => renderPosts());
 
 function showPosition() {
@@ -67,7 +67,7 @@ function showMap(position) {
     //cirlce through posts and fire a callback function for each post. Each time we fire callback fn we get access.
 
     template += `
-      <h2 class='container__weather--city'>${weater.name} ${weater.sys.country}</h2>
+      <h2 class='container__weather--city'>${weater.name}, ${weater.sys.country}</h2>
       <div class='container__weather--date'>${date}</br>${time}</div>
       <div class='container__weather--icon'><img src='${icon}'></img></div>
       <ul class='container__weather--info'>
@@ -82,10 +82,8 @@ function showMap(position) {
     asideContainer.innerHTML = template;
   };
   renderWeather();
-
+  //wait till DOM content is loaded, then fire a function.
   window.addEventListener("DOMContentLoaded", () => renderWeather());
 }
 
 showPosition();
-
-//wait till DOM content is loaded, then fire a function.
