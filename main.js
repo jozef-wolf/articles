@@ -26,7 +26,6 @@ https://jsonplaceholder.typicode.com/posts?_sort=title
 
 window.addEventListener("DOMContentLoaded", () => renderPosts());
 
-let input = "Sopot";
 function showPosition() {
   navigator.geolocation.getCurrentPosition(showMap);
 }
@@ -38,8 +37,6 @@ function showMap(position) {
   console.log(lat, long);
 
   const renderWeather = async () => {
-    // let url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
-
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b9c60fdee21abc84b0d8ef6f3ec39b79`;
     const res = await fetch(url);
     const weater = await res.json();
@@ -57,10 +54,28 @@ function showMap(position) {
     let celsiusTemp = convertToC(weater.main.temp).toFixed(1);
     let celsiusFeel = convertToC(weater.main.feels_like).toFixed(1);
 
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 1000);
+    }
+    function checkTime(i) {
+      if (i < 10) {
+        i = "0" + i;
+      } // add zero in front of numbers < 10
+      return i;
+    }
+
     //cirlce through posts and fire a callback function for each post. Each time we fire callback fn we get access.
 
     template += `
       <h2 class='container__weather--city'>${weater.name} ${weater.sys.country}</h2>
+      <div id="time" onload="startTime()"></div>
       <div class='container__weather--icon'><img src='${icon}'></img></div>
       <ul class='container__weather--info'>
       <li>${weater.weather[0].description}</li>
