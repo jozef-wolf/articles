@@ -74,9 +74,9 @@ function showMap(position) {
     asideContainer.innerHTML = template;
   };
   renderWeather();
+
+  window.addEventListener("DOMContentLoaded", () => renderWeather());
 }
 showPosition();
 
 //wait till DOM content is loaded, then fire a function.
-
-// window.addEventListener("DOMContentLoaded", () => renderWeather());
