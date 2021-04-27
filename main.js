@@ -52,7 +52,7 @@ function showMap(position) {
     }
 
     let celsiusTemp = convertToC(weater.main.temp).toFixed(1);
-    let celsiusFeel = convertToC(weater.main.feels_like).toFixed(1);
+  
 
     var today = new Date();
 
@@ -73,7 +73,6 @@ function showMap(position) {
       <ul class='container__weather--info'>
       <li>${weater.weather[0].description}</li>
         <li><i class="fas fa-thermometer-three-quarters"></i>${celsiusTemp} °C</li>
-        <li>Feels like: ${celsiusFeel} °C</li>
         <li><i class="fas fa-tint"></i>Humidity: ${weater.main.humidity}%</li>
         <li>Pressure: ${weater.main.pressure} hPa</li>
       </ul>
