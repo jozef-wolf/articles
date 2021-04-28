@@ -42,9 +42,6 @@ function showMap(position) {
     const weater = await res.json();
     console.log(weater);
 
-    let pic = weater.weather[0].icon;
-    let icon = `http://openweathermap.org/img/wn/${pic}.png`;
-
     let template = "";
     function convertToC(kelvin) {
       let celsius = kelvin - 273.15;
@@ -52,19 +49,19 @@ function showMap(position) {
     }
 
     let celsiusTemp = convertToC(weater.main.temp).toFixed(1);
-  
+    let pic = weater.weather[0].icon;
+    let icon = `http://openweathermap.org/img/wn/${pic}.png`;
 
-    var today = new Date();
+    let today = new Date();
 
-    var date =
+    let date =
       today.getFullYear() +
       "-" +
       (today.getMonth() + 1) +
       "-" +
       today.getDate();
-    var time =
+    let time =
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    //cirlce through posts and fire a callback function for each post. Each time we fire callback fn we get access.
 
     template += `
       <h2 class='container__weather--city'>${weater.name}, ${weater.sys.country}</h2>
@@ -80,7 +77,9 @@ function showMap(position) {
 
     asideContainer.innerHTML = template;
   };
+
   renderWeather();
+
   //wait till DOM content is loaded, then fire a function.
   window.addEventListener("DOMContentLoaded", () => renderWeather());
 }
