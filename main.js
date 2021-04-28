@@ -64,6 +64,7 @@ function showMap(position) {
       today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
     template += `
+      <div class='container__weather--title'>WEATHER</div>
       <h2 class='container__weather--city'>${weater.name}, ${weater.sys.country}</h2>
       <div class='container__weather--date'>${date}</br>${time}</div>
       <div class='container__weather--icon'><img src='${icon}'></img></div>
