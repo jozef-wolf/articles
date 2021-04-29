@@ -115,6 +115,8 @@ body {
   height: auto;
 }
 .container__posts {
+  display: flex;
+  flex-direction: column;
   border: none;
   width: 60%;
   height: auto;

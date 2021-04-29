@@ -137,12 +137,13 @@ body {
   height: auto;
 
   &__posts {
+    display: flex;
+    flex-direction: column;
     border: none;
     width: 60%;
     height: auto;
     background-color: transparent;
     margin: 0 5px 0 5px;
-
     .post {
       @include flex-column;
       align-items: center;
