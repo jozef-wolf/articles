@@ -6,4 +6,3 @@
 
 [Go to Articles](https://jozef-wolf.github.io/articles/)
 
-![](articles.JPG)
