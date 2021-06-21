@@ -114,6 +114,14 @@ body {
   width: 100vw;
   height: auto;
 }
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
 .container__posts {
   display: flex;
   flex-direction: column;
@@ -122,6 +130,11 @@ body {
   height: auto;
   background-color: transparent;
   margin: 0 5px 0 5px;
+}
+@media (max-width: 768px) {
+  .container__posts {
+    width: 90%;
+  }
 }
 .container__posts .post {
   display: flex;
@@ -144,6 +157,12 @@ body {
   font-weight: 300;
   background-color: #86999e;
   color: white;
+}
+@media (max-width: 768px) {
+  .container__weather {
+    width: 90%;
+    margin-bottom: 20px;
+  }
 }
 .container__weather--title {
   color: #404040;

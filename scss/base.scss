@@ -135,7 +135,12 @@ body {
   margin-top: 110px;
   width: 100vw;
   height: auto;
-
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 50px;
+  }
   &__posts {
     display: flex;
     flex-direction: column;
@@ -144,6 +149,9 @@ body {
     height: auto;
     background-color: transparent;
     margin: 0 5px 0 5px;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
     .post {
       @include flex-column;
       align-items: center;
@@ -165,6 +173,10 @@ body {
     font-weight: 300;
     background-color: rgb(134, 153, 158);
     color: white;
+    @media (max-width: 768px) {
+      width: 90%;
+      margin-bottom: 20px;
+    }
     &--title {
       color: #404040;
       width: 100%;
